@@ -431,4 +431,71 @@ Contoh di atas menunjukkan bahwa code akan dieksekusi secara tidak berurutan. Di
 
 ### Promise
 
-Promise -> merepresentasika
+State yg ada pada promise :
+
+- pending
+- rejected
+- fulfilled
+
+analogi promise:
+
+<img src="analogi-promise.png">
+
+Promise syntax :
+
+```javascript
+let myPromise = new Promise(function (myPromise, myReject) {
+  // *producing code
+
+  myResolve(); // when successful
+  myReject(); // when error
+});
+
+//consuming code
+myPromise.then(
+  function (value) {
+    /*code if successful */
+  },
+  function (error) {
+    /*code if some error */
+  }
+);
+```
+
+contoh:
+
+```javascript
+let Promise = new Promise((resolbve, reject) => {
+  setTimeout(() => {
+    resolve("B");
+  }, 2000);
+});
+
+console.log("A");
+
+Promise.then((result) => {
+  console.log(result);
+});
+
+console.log("C");
+```
+
+output:
+
+```
+A
+C
+B
+```
+
+## **Web Storage**
+
+Browser memiliki storagenya tersendiri. Penyimpanan (storage) pada website disebut **Web Storage**.
+
+Data user akan disimpan ke dalam storage browser menggunakan web storage seperti cookies, local storage, dan session storage.
+
+Cookies -> data kecil yang dikirim dari situs web dan disimpan di komputer kita oleh web browser saat kita menjelajah.
+
+Biasanya data yang disimpan di cookies adalah access token pengguna saat login atau data pencarian saat melakukan pencarian pada situs web tertentu. Hal ini yang biasanya dilakukan oleh situs pencarian untuk melacak pencarian kita dan menampilkan iklan yang berhubungan dengan pencarian kita sebelumnnya.
+
+Namun ada beberapa kekurangan sehingga kita dapat memanfaatkan jenis web storage yang lain seperti **Local Storage** dan **Session Storage**.
