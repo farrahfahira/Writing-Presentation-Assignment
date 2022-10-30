@@ -377,4 +377,58 @@ function pow(x, n) {
 console.log(pow(2, 3)); // 8
 ```
 
-## **Asycncronous**
+## **Asyncronous**
+
+Javascript adalah bahasa pemrograman yang bersifat
+
+- single thread (satu jalur)
+
+<img src="gambar-2.png">
+
+- non blocking (jika suatu proses dijalankan dan memakan waktu, maka proses yang lain dapat langsung diproses alias tidak perlu menunggu)
+
+- asynchronous (suatu proses bisa disela. apabila suatu proses belum selesai maka proses lain dapat langsung dipanggil)
+
+Pada asynchronous terdapat 3 kunci utama:
+
+- Callback
+- Promise
+- Async await
+
+### Callback
+
+Callback adalah function yang dijadikan sebagai argumen. Callback (dipanggil kembali) akan menyimpan suatu proses ke dalam callback queue baru setelah itu akan dipanggil kembali.
+
+```javascript
+() => {}; //bentuk callback
+
+//callback yang dijadikan sebuah argumen (dimasukkan dalam parameter sebuah function lain)
+function( () => {
+    //code
+});
+```
+
+```javascript
+console.log("A");
+
+// ini adalah callback
+setTimeout(() => {
+  console.log("B");
+}, 1000);
+
+console.log("C");
+```
+
+Output:
+
+```
+A
+C
+B
+```
+
+Contoh di atas menunjukkan bahwa code akan dieksekusi secara tidak berurutan. Dimana harusnya A-B-C (jika sesuai baris), namun karena diterapkan callback (bentuk asynchronous) maka instruksi yg dieksekusi menjadi A-C-B.
+
+### Promise
+
+Promise -> merepresentasika
