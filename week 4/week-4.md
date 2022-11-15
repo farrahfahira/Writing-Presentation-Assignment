@@ -1,4 +1,36 @@
-## **Relative**
+## **Asynchronous - Fetch**
+
+## **Git dan Github Lanjutan**
+
+Github dibuat untuk berkolaborasi bersama developer lain. Untuk berkolaborasi di satu repositori, para developer dapat membuat branchnya masing-masing.
+
+- cara membuat branch
+
+```
+git branch branch-name
+```
+
+- berganti branch
+
+```
+git checkout branch-name
+```
+
+- menampilkan seluruh list branch yang ada
+
+```
+git branch
+```
+
+- menghapus branch
+
+```
+git branch -d branch-name
+```
+
+setelah masing-masing memiliki branch, branch tersebut dapat disatukan (merge) dengan mengajukan **pull request**. maka nantinya ketua tim akan memeriksa codingan yg akan dimerge dan (apabila tidak terjadi konflik) menerima pull request.
+
+## **Responsive**
 
 Responsive -> memungkinkan website **dapat diakses pada device apapun** dan **tampilannya masih bagus**.
 
